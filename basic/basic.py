@@ -20,13 +20,7 @@ print(a)
 a = [i for i in range(10)]
 print(a)
 
-##slicing
-print(a[2:4])
-
-a = [i for i in range(20) if i%2 == 1]
-print(a)
-
-#licing
+#slicing
 print(a[2:4])
 
 a = [i for i in range(20) if i%2 == 1]
