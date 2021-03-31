@@ -23,6 +23,7 @@ def Q1Test_1(money):
 
 def Q1Test_2(m) : 
   coin = 0
+  #m을 10으로 나눈다 -> 리버스한다 ->
   m = list(map(int,str(m//10)[::-1]))
   for i in m :
     if i >= 5 : 
@@ -70,6 +71,26 @@ def Q2answer(n, k):
 
 Q2Test_1(13, 4)
 Q2answer(13, 4)
+
+def Q3Test1(n):
+  answer = int(n[0])
+  for i in range(1, len(n)):
+    i =int(n[i])
+    answer = (answer * i) if i >= 2 else(answer + i)
+  print(answer)
+
+def Q3answer(n):
+  answer = int(n[0])
+  for i in range(1, len(n)):
+    num = int(n[i])
+    if num >= 2 :
+      answer *= num
+    else:
+      answer += num
+  print(answer)
+  
+Q3Test1('34019')
+Q3answer('34019')
 
 def Q3Test1(n):
   answer = int(n[0])
