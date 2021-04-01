@@ -111,3 +111,15 @@ def Q3answer(n):
   
 Q3Test1('34019')
 Q3answer('34019')
+
+def Q4answer(n, data):
+  data.sort()
+  result = 0
+  count = 0
+
+  for i in data:
+    count += 1
+    if count >= i:
+      result += 1
+      count = 0
+  print(result)
