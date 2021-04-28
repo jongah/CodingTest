@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int K = sc.nextInt();
+        int count = 0;  //K번째 확인을 위한 count변수                      
+        int answer = 0; //K번째 i(약수)를 넣을 answer 변수
+        for(int i = 1; i <= N; i ++){
+            if(N%i == 0){ //약수라면
+                count ++;
+                if(count == K){ //K번째 약수라면
+                    answer = i; //답은 i(약수)이며 반복문을 끝낸다
+                    break;    
+                }
+            }   
+        }
+        System.out.print(answer);
+    }
+}
