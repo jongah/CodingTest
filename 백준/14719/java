@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int H = sc.nextInt();
+        int W = sc.nextInt();
+        int [] arr = new int[W];
+        for(int i = 0; i < arr.length; i ++){
+          arr[i] = sc.nextInt();
+        }
+        //배열 index가 0부터 시작하므로 -1로 초기화
+        int b_count = -1; 
+        int water = 0;
+        
+        while(H != 0){
+          b_count = -1;
+          for(int j = 0; j < W; j ++){
+            if(arr[j] >= H){
+              if(b_count != -1){
+                water += j - b_count - 1; 
+              }
+              b_count = j;
+            }
+          }
+          H--;
+        }
+      System.out.println(water);
+    }
+}
